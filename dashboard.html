@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <script src="storage.js"></script>
+
+    <!-- SIDEBAR TOGGLE -->
+    <input type="checkbox" id="sidebar-toggle" hidden>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-fire"></i>
+                <h2>FocusForge</h2>
+            </div>
+            <label for="sidebar-toggle" class="close-btn">✕</label>
+        </div>
+
+        <div class="sidebar-menu">
+            <div class="menu-section">
+                <p class="section-title">MY TASKS</p>
+                <ul>
+                    <li><a href="plan.html"><i class="fas fa-calendar-alt"></i>Planned Task</a></li>
+                    <li><a href="myday.html"><i class="fas fa-sun"></i>My Day</a></li>
+                    <li><a href="important.html"><i class="fas fa-star"></i>Important Task</a></li>
+                    <li><a href="assignedtask.html"><i class="fas fa-tasks"></i>Assigned Task</a></li>
+                    <li><a href="flagged.html"><i class="fas fa-flag"></i>Flagged Task</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-section">
+                <p class="section-title">TOOLS</p>
+                <ul>
+                    <li><a href="pomodoro.html"><i class="fas fa-hourglass-end"></i>Pomodoro Timer</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <a href="profile.html" class="user-profile">
+                <i class="fas fa-user-circle"></i>
+                <span>Profile</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <!-- HEADER -->
+        <div class="header">
+            <label for="sidebar-toggle" class="toggle-btn"><i class="fas fa-bars"></i></label>
+
+            <div class="header-search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search your tasks...">
+            </div>
+
+            <div class="header-right">
+                <div class="user-menu">
+                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="avatar">
+                </div>
+            </div>
+        </div>
+
+        <!-- WELCOME SECTION -->
+        <div class="welcome-section">
+            <div class="welcome-text">
+                <h1>Welcome back, Student! 👋</h1>
+                <p>Ready to crush your goals today?</p>
+            </div>
+            <div class="quick-stats">
+                <div class="stat-card">
+                    <i class="fas fa-clipboard-list"></i>
+                    <div>
+                        <p>Total Tasks</p>
+                        <h3 data-stat="total">0</h3>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <p>Completed</p>
+                        <h3 data-stat="completed">0</h3>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-hourglass-half"></i>
+                    <div>
+                        <p>In Progress</p>
+                        <h3 data-stat="inProgress">0</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN DASHBOARD -->
+        <div class="dashboard-grid">
+            <!-- TODAY'S TASKS -->
+            <div class="task-section">
+                <div class="section-header">
+                    <h2>📝 My Day</h2>
+                    <a href="myday.html" class="view-all">View All →</a>
+                </div>
+                <div class="task-list">
+                    <!-- Tasks will be loaded here -->
+                </div>
+            </div>
+
+            <!-- IMPORTANT TASKS -->
+            <div class="task-section">
+                <div class="section-header">
+                    <h2>⭐ Important</h2>
+                    <a href="important_task.html" class="view-all">View All →</a>
+                </div>
+                <div class="task-list">
+                    <!-- Tasks will be loaded here -->
+                </div>
+            </div>
+
+            <!-- PLANNED TASKS -->
+            <div class="task-section">
+                <div class="section-header">
+                    <h2>📅 Planned Tasks</h2>
+                    <a href="planned_task.html" class="view-all">View All →</a>
+                </div>
+                <div class="task-list">
+                    <!-- Tasks will be loaded here -->
+                </div>
+            </div>
+
+            <!-- ASSIGNED TASKS -->
+            <div class="task-section">
+                <div class="section-header">
+                    <h2>📌 Assigned Tasks</h2>
+                    <a href="assigned_task.html" class="view-all">View All →</a>
+                </div>
+                <div class="task-list">
+                    <!-- Tasks will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
